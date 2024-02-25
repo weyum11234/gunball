@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ds3yya7ijh2wa"
+path="res://.godot/imported/Scope_1.obj-dd5b7fbcd01b7041bf3bd3991a6d1f2d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Scope_1.obj-dd5b7fbcd01b7041bf3bd3991a6d1f2d.mesh"]
+
+source_file="res://imports/Ultimate Gun Pack by Quaternius/OBJ/Accessories/Scope_1.obj"
+dest_files=["res://.godot/imported/Scope_1.obj-dd5b7fbcd01b7041bf3bd3991a6d1f2d.mesh", "res://.godot/imported/Scope_1.obj-dd5b7fbcd01b7041bf3bd3991a6d1f2d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0r8qm0hm7svt"]
+
+[ext_resource type="PackedScene" uid="uid://ckmv3gdw08bd2" path="res://assets/field/goal.tscn" id="1_fy5dj"]
+[ext_resource type="PackedScene" uid="uid://oi2id837ausu" path="res://assets/field/goal_field_red.tscn" id="2_1rsjy"]
+[ext_resource type="PackedScene" uid="uid://5nr0bqqmp42" path="res://assets/field/goal_field_blue.tscn" id="3_l0mkt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4yvdd"]
+albedo_color = Color(0, 0.603922, 0.0901961, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mq74r"]
+material = SubResource("StandardMaterial3D_4yvdd")
+size = Vector3(75, 0.001, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vcx65"]
+size = Vector3(75, 0.001, 100)
+
+[node name="Field" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_mq74r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_vcx65")
+
+[node name="Goal" parent="." instance=ExtResource("1_fy5dj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -49)
+
+[node name="Goal2" parent="." instance=ExtResource("1_fy5dj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 49)
+
+[node name="GoalFieldRed" parent="." instance=ExtResource("2_1rsjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 49)
+
+[node name="GoalFieldBlue" parent="." instance=ExtResource("3_l0mkt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -49)

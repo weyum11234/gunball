@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7k67ay0uuryk"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_0hk6y"]
+[ext_resource type="PackedScene" uid="uid://cfwhfofublmw0" path="res://assets/weapons/pistol.tscn" id="2_831qq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jnoub"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2w0qn"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_cywkt"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/sync = true
+properties/2/path = NodePath("Head/Camera3D:rotation")
+properties/2/spawn = true
+properties/2/sync = true
+properties/3/path = NodePath("Head:position")
+properties/3/spawn = true
+properties/3/sync = true
+properties/4/path = NodePath("Head:rotation")
+properties/4/spawn = true
+properties/4/sync = true
+
+[node name="Player" type="CharacterBody3D" groups=["Enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 2
+script = ExtResource("1_0hk6y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_jnoub")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_2w0qn")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62838, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="Pistol" parent="Head/Camera3D" instance=ExtResource("2_831qq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3, -0.35, -0.4)
+
+[node name="AimCast" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -50)
+collision_mask = 2
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_cywkt")

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dnksbepc55dbn"
+path="res://.godot/imported/Bipod.obj-6ffab1878f26845b0cd52c5021ae16f0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bipod.obj-6ffab1878f26845b0cd52c5021ae16f0.mesh"]
+
+source_file="res://imports/Ultimate Gun Pack by Quaternius/OBJ/Accessories/Bipod.obj"
+dest_files=["res://.godot/imported/Bipod.obj-6ffab1878f26845b0cd52c5021ae16f0.mesh", "res://.godot/imported/Bipod.obj-6ffab1878f26845b0cd52c5021ae16f0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

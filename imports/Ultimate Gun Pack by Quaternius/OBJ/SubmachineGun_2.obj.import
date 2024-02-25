@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dnbgs3j1txsiy"
+path="res://.godot/imported/SubmachineGun_2.obj-f3006990f3897bdf56eb42f0fa1ac776.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SubmachineGun_2.obj-f3006990f3897bdf56eb42f0fa1ac776.mesh"]
+
+source_file="res://imports/Ultimate Gun Pack by Quaternius/OBJ/SubmachineGun_2.obj"
+dest_files=["res://.godot/imported/SubmachineGun_2.obj-f3006990f3897bdf56eb42f0fa1ac776.mesh", "res://.godot/imported/SubmachineGun_2.obj-f3006990f3897bdf56eb42f0fa1ac776.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
